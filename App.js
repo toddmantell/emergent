@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
     this.renderScene = this.renderScene.bind(this);
     this.configureScene = this.configureScene.bind(this);
-    this.redirectToFindTherapist = ths.redirectToFindTherapist.bind(this);
+    this.redirectToFindTherapist = this.redirectToFindTherapist.bind(this);
   }
   renderScene(route, nav) {
         switch (route.name) {
