@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
 const SplashForm = props => {
         return (
@@ -7,7 +7,7 @@ const SplashForm = props => {
                         <Text style={{color: 'midnightblue'}}>Open up App.js to start working on your app!</Text>
                         <Text style={{color: 'midnightblue'}}>Changes you make will automatically reload.</Text>
                         <Text style={{color: 'midnightblue'}}>Shake your phone to open the developer menu.</Text>
-                        <Button title="" onPress={props.redirectToFindTherapist} color="midnightblue" title="Find A Therapist" />
+                        <Button title="FindTherapist" onPress={props.redirectToFindTherapist} color="midnightblue" title="Find A Therapist" />
                 </View>
         );
 }

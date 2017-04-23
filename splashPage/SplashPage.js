@@ -8,7 +8,7 @@ export default class SplashPage extends React.Component {
       <SplashForm styles={styles} redirectToFindTherapist={this.props.redirectToFindTherapist} />
     );
   }
-}
+} 
 
 const styles = StyleSheet.create({
   container: {

@@ -16,8 +16,7 @@ export default class App extends React.Component {
         case routeNames.FIND_THERAPIST:
             return (
                 <FindTherapist />
-            );
-        case routeNames.
+            );        
         default:
             return (
                 <SplashPage redirectToFindTherapist={this.redirectToFindTherapist} />

@@ -21,6 +21,15 @@ class FindTherapist extends React.Component {
     }    
 }
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 2,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'  
+    }
+})
+
 FindTherapist.propTypes = {
   
 }
