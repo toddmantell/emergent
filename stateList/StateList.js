@@ -7,22 +7,14 @@ class StateList extends React.Component {
     constructor() {
         super();
 
-        const ds = new ListView.DataSource({
-            rowHasChanged: (r1, r2) => r1 !== r2
-        });
-
         this.state = {
-            dataSource: ds.cloneWithRows(states)
+            
         };
 
         this.selectState = this.selectState.bind(this);
-        this.renderRow = this.renderRow.bind(this);
     }
     selectState(event) {
 
-    }
-    renderRow(state) {
-        return <StateRow state={state} selectState={this.selectState} />
     }
     render() {
         return (
@@ -41,19 +33,6 @@ class StateList extends React.Component {
             </View>
         );
     }
-    /*old way, using Listview, we've since refactored because Scrollview is much more intuitive
-    
-    render() {
-        return (
-            <View style={styles.container} >
-                <ListView 
-                    dataSource={this.state.dataSource}
-                    key={this.props.states}
-                    renderRow={this.renderRow} 
-                />
-           </View>
-        );
-    }*/
 }
 
 const styles = StyleSheet.create({
