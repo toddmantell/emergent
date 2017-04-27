@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Navigator } from 'react-native';
 import SplashPage from './splashPage/SplashPage';
 import FindTherapist from './findTherapist/FindTherapist';
+import StateList from './stateList/StateList';
 
 export default class App extends React.Component {
   constructor() {
@@ -16,7 +17,11 @@ export default class App extends React.Component {
         case routeNames.FIND_THERAPIST:
             return (
                 <FindTherapist />
-            );        
+            );
+        case routeNames.STATELIST:
+          return (
+            <StateList />
+          );
         default:
             return (
                 <SplashPage redirectToFindTherapist={this.redirectToFindTherapist} />
@@ -28,7 +33,7 @@ export default class App extends React.Component {
   }
   redirectToFindTherapist() {
     this.nav.push({
-      name: routeNames.FIND_THERAPIST
+      name: routeNames.STATELIST
     });
   }
   render() {
@@ -46,7 +51,8 @@ export default class App extends React.Component {
 
 const routeNames = {
   FIND_THERAPIST: 'FIND_THERAPIST',
-  SPLASH_PAGE: 'SPLASH_PAGE'
+  SPLASH_PAGE: 'SPLASH_PAGE',
+  STATELIST: 'STATELIST'
 };
 
 const styles = StyleSheet.create({

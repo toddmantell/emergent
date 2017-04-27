@@ -14,3 +14,11 @@ test("Splash Page Renders", () => {
     expect(mountedSplashPage.children.length).toBe(4);
     expect(mountedSplashPage.children[3].type).toBe('View');
 });
+
+//So cooooooool!!!
+test("match snapshot", () => {
+    const mountedSplashPage = renderer.create(<SplashPage redirectToFindTherapist={stubFunctionAsProp} 
+        style={{padding: 0}} />);
+
+    expect(mountedSplashPage.toJSON()).toMatchSnapshot();
+})
