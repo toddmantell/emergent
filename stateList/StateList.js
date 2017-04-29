@@ -1,19 +1,26 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView, ListView} from 'react-native';
+import { routes } from '../constants';
 import StateRow from './StateRow';
 import states from '../states';
 
 class StateList extends React.Component {
+    static navigationOptions = {
+        title: "Choose Your State"
+    };
     constructor() {
         super();
 
-        this.state = {
-            
+        this.state = {            
         };
 
         this.selectState = this.selectState.bind(this);
     }
-    selectState(event) {
+    selectState(state) {
+        const { navigate } = this.props.navigation;
+
+        //also, pass the U.S. State to component or store in redux
+        navigate(routes.StateList);
 
     }
     render() {
