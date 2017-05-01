@@ -2,11 +2,11 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const StateRow = props => {
-        return (
-            <TouchableOpacity onPress={props.selectState} style={styles.container}>
-                <Text style={styles.label}>{props.state.stateName}</Text>                
-           </TouchableOpacity>
-        );
+    return (
+        <TouchableOpacity onPress={() => props.selectState(props.state)} style={styles.container}>
+            <Text style={styles.label}>{props.state.stateName}</Text>                
+        </TouchableOpacity>
+    );
 }
 
 const styles = StyleSheet.create({

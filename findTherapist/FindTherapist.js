@@ -1,15 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet, ListView} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 class FindTherapist extends React.Component {
     constructor() {
-        super();
-
-        this.renderRow = this.renderRow.bind(this);
+        super();        
     }
-    renderRow() {
-        //in here we will render each row in the ListView
-    }
+    static navigationOptions = {
+        title: "Find A Therapist"
+    };
     render() {
         return (
             <View style={styles.container}>
@@ -24,9 +22,9 @@ class FindTherapist extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 2,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'  
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'  
     }
 })
 

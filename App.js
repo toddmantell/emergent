@@ -7,7 +7,8 @@ import StateList from './stateList/StateList';
 
 const AppNavigation = StackNavigator({
   Home: { screen: SplashPage },
-  StateList: { screen: StateList } 
+  StateList: { screen: StateList },
+  FindTherapist: { screen: FindTherapist }
 })
 
 export default class App extends React.Component {

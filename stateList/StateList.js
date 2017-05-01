@@ -18,10 +18,10 @@ class StateList extends React.Component {
     }
     selectState(state) {
         const { navigate } = this.props.navigation;
-
+        
+        //alert(state.abbreviation);
         //also, pass the U.S. State to component or store in redux
-        navigate(routes.StateList);
-
+        navigate(routes.FindTherapist);
     }
     render() {
         return (
@@ -44,7 +44,7 @@ class StateList extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 40,
+        //marginTop: 40,
         backgroundColor: '#F7F7F7',
         flex: 1,
         justifyContent: 'flex-start'
