@@ -15,23 +15,7 @@ export default class App extends React.Component {
   static navigationOptions = {
     title: 'Welcome'
   }
-  render() {
-    //show a loading screen on app init?
+  render() {    
     return <AppNavigation />;
   }
 }
-
-// const routeNames = {
-//   FIND_THERAPIST: 'FIND_THERAPIST',
-//   SPLASH_PAGE: 'SPLASH_PAGE',
-//   STATELIST: 'STATELIST'
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 2,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   }
-// });
