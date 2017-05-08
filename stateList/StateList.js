@@ -18,8 +18,7 @@ class StateList extends React.Component {
     }
     selectState(state) {
         const { navigate } = this.props.navigation;
-        
-        //alert(state.abbreviation);
+
         //also, pass the U.S. State to component or store in redux
         navigate(routes.FindTherapist);
     }

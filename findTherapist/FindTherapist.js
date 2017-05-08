@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 class FindTherapist extends React.Component {
     constructor() {
@@ -13,7 +13,13 @@ class FindTherapist extends React.Component {
             <View style={styles.container}>
                 {/*<ListView dataSource={this.state.dataSource}
                 renderRow={this.renderRow}/>*/}
-                <Text>This will render a list of menu items</Text>
+                <Text>Do you know the kind of therapist you need?</Text>
+                <TouchableOpacity onPress={() => alert("You said Yes")}>
+                    <Text>Yes</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert("You said No")}>
+                    <Text>No</Text>
+                </TouchableOpacity>
            </View>
         );
     }    
