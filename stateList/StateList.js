@@ -1,8 +1,11 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView, ListView} from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from './redux';
 import { routes } from '../constants';
 import StateRow from './StateRow';
 import states from '../states';
+import findTherapistActions from '../sharedState/actions/findTherapistActions';
 
 class StateList extends React.Component {
     static navigationOptions = {
@@ -54,4 +57,16 @@ StateList.propTypes = {
   
 }
 
-export default StateList;
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(findTherapistActions, dispatch)
+    };
+}
+
+function mapStateToProps(state) {
+    return {
+        state: state.state
+    };
+}
+
+export default connect(mapDispatchToProps, mapStateToProps)(StateList);
