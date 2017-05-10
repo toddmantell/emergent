@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import findTherapistReducer from './findTherapistReducer';
+import stateReducer from './stateReducer';
 
-const combinedReducers = combineReducers({findTherapistReducer});
+const combinedReducers = combineReducers({stateReducer});
 
 export default combinedReducers;

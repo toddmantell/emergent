@@ -1,5 +1,4 @@
 export default {
-    state: {},
-    specialty: '',
-
+    state: {}
+    //specialty: ''
 };

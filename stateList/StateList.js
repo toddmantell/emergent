@@ -5,16 +5,17 @@ import { bindActionCreators } from 'redux';
 import { routes } from '../constants';
 import StateRow from './StateRow';
 import states from '../states';
-import findTherapistActions from '../sharedState/actions/findTherapistActions';
+import * as findTherapistActions from '../sharedState/actions/findTherapistActions';
 
-class StateList extends React.Component {
+export class StateList extends React.Component {
     static navigationOptions = {
         title: "Choose Your State"
     };
     constructor() {
         super();
 
-        this.state = {            
+        this.state = {
+            state: {}            
         };
 
         this.selectState = this.selectState.bind(this);
@@ -22,7 +23,7 @@ class StateList extends React.Component {
     selectState(state) {
         const { navigate } = this.props.navigation;
 
-        //also, pass the U.S. State to component or store in redux
+        this.props.actions.addState(state);
         navigate(routes.FindTherapist);
     }
     render() {
@@ -69,4 +70,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapDispatchToProps, mapStateToProps)(StateList);
+export default connect(mapStateToProps, mapDispatchToProps)(StateList);

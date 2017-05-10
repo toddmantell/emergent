@@ -3,8 +3,7 @@ import React from 'react';
 import FindTherapist from '../../../findTherapist/FindTherapist.js';
 import renderer from 'react-test-renderer';
 
-//const shallowMountedFindTherapistComp = shallow(<FindTherapist />);
-const renderedFindTherapist = renderer.create(<FindTherapist />);
+//const renderedFindTherapist = renderer.create(<FindTherapist />);
 
 test("Component Renders", () => {
 

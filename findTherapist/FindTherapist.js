@@ -1,5 +1,8 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as FindTherapistActions from '../sharedState/actions/findTherapistActions';
 
 class FindTherapist extends React.Component {
     constructor() {
@@ -14,7 +17,7 @@ class FindTherapist extends React.Component {
                 {/*<ListView dataSource={this.state.dataSource}
                 renderRow={this.renderRow}/>*/}
                 <Text>Do you know the kind of therapist you need?</Text>
-                <TouchableOpacity onPress={() => alert("You said Yes")}>
+                <TouchableOpacity onPress={() => alert(JSON.stringify(this.props.state))}>
                     <Text>Yes</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => alert("You said No")}>
@@ -38,4 +41,17 @@ FindTherapist.propTypes = {
   
 }
 
-export default FindTherapist;
+//but this is not right, as the state is coming as stateReducer instead of state.  There was an issue loading initialState that needs to be fixed.
+function mapStateToProps(state) {
+    return {
+        state: state
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(FindTherapistActions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FindTherapist);

@@ -1,4 +1,4 @@
-import findTherapistReducer from '../../sharedState/reducers/findTherapistReducer';
+import stateReducer from '../../sharedState/reducers/stateReducer';
 import * as actionTypes from '../../sharedState/actions/actionTypes';
 
 test("return the state that was chosen", () => {
@@ -6,7 +6,7 @@ test("return the state that was chosen", () => {
 
     const action = {type: actionTypes.ADD_OR_UPDATE_STATE, newState: {abbreviation: 'IL', name: 'Illinois'}};
 
-    const result = findTherapistReducer({}, action);
+    const result = stateReducer({}, action);
 
     expect(result).toMatchObject(expected);
 });
