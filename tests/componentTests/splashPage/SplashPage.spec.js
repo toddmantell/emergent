@@ -1,5 +1,5 @@
 import React from 'react';
-import SplashPage from './SplashPage';
+import SplashPage from '../../../splashPage/SplashPage';
 import renderer from 'react-test-renderer';
 
 const stubFunctionAsProp = () => 'stub!';
@@ -15,7 +15,6 @@ test("Splash Page Renders", () => {
     expect(mountedSplashPage.children[3].type).toBe('View');
 });
 
-//So cooooooool!!!
 test("match snapshot", () => {
     const mountedSplashPage = renderer.create(<SplashPage redirectToFindTherapist={stubFunctionAsProp} 
         style={{padding: 0}} />);

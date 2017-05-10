@@ -1,6 +1,6 @@
 import React from 'react';
 //import {shallow, mount} from 'enzyme';
-import FindTherapist from './FindTherapist';
+import FindTherapist from '../../../findTherapist/FindTherapist.js';
 import renderer from 'react-test-renderer';
 
 //const shallowMountedFindTherapistComp = shallow(<FindTherapist />);
