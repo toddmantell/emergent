@@ -18,9 +18,11 @@ export default class App extends React.Component {
   static navigationOptions = {
     title: 'Welcome'
   }
-  render() {    
-    return <Provider store={store}>
-              <AppNavigation />;
-            </Provider>
+  render() {
+    return (
+      <Provider store={store}>
+        <AppNavigation />
+      </Provider>
+    );
   }
 }

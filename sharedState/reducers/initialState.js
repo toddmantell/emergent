@@ -1,5 +1,5 @@
-export default [
-    state = {},
-    specialty = '',
-    
-];
+export default {
+    state: {},
+    specialty: '',
+
+};

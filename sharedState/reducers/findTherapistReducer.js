@@ -1,10 +1,10 @@
 import initialState from './initialState';
+import * as actionTypes from '../actions/actionTypes';
 
-export default function findTherapistReducer(state = initialState, action) {
+export default function findTherapistReducer(state = initialState.state, action) {
     switch(action.type) {
-        case 'ADD_OR_UPDATE_STATE':
-            return [...state.filter(existingState => existingState.abbreviation !== action.state.abbreviation),
-                        Object.assign({}, action.state)];
+        case actionTypes.ADD_OR_UPDATE_STATE:
+            return Object.assign({}, action.newState);
         default:
             return state;
     }

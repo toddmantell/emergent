@@ -1,10 +1,12 @@
 import findTherapistReducer from '../../sharedState/reducers/findTherapistReducer';
+import * as actionTypes from '../../sharedState/actions/actionTypes';
 
 test("return the state that was chosen", () => {
-    const expected = {};
+    const expected = {abbreviation: 'IL', name: 'Illinois'};
 
-    const action = {type: 'ADD_STATE', state: {abbreviation: 'IL', name: 'Illinois'}};
+    const action = {type: actionTypes.ADD_OR_UPDATE_STATE, newState: {abbreviation: 'IL', name: 'Illinois'}};
 
-    const result = findTherapistReducer(action);
-    expect(true).toBe(false);
+    const result = findTherapistReducer({}, action);
+
+    expect(result).toMatchObject(expected);
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView, ListView} from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from './redux';
+import { bindActionCreators } from 'redux';
 import { routes } from '../constants';
 import StateRow from './StateRow';
 import states from '../states';

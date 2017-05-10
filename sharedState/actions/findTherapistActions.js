@@ -1,7 +1,8 @@
+import * as actionTypes from './actionTypes';
 
-export const addState = stateToAdd => {
+export const addState = newState => {
     return {
-        type: 'ADD_OR_UPDATE_STATE',
-        stateToAdd
+        type: actionTypes.ADD_OR_UPDATE_STATE,
+        newState
     }
 }
