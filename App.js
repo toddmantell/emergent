@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import SplashPage from './splashPage/SplashPage';
 import FindTherapist from './findTherapist/FindTherapist';
@@ -15,14 +15,17 @@ const AppNavigation = StackNavigator({
 });
 
 export default class App extends React.Component {
-  static navigationOptions = {
-    title: 'Welcome'
-  }
   render() {
     return (
       <Provider store={store}>
-        <AppNavigation />
+        <AppNavigation style={styles.container} />
       </Provider>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: (Platform.OS === 'android') ? 20 : 0
+  }
+});

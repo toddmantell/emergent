@@ -47,7 +47,7 @@ export class StateList extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        //marginTop: 40,
+        paddingTop: 20,
         backgroundColor: '#F7F7F7',
         flex: 1,
         justifyContent: 'flex-start'
